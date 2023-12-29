@@ -8,3 +8,28 @@
     border-radius: 10px;
     color: var(--medium-text-primary);
 }
+
+.form-button {
+    all: unset;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: opacity .2s;
+    user-select: none;
+    color: var(--light-text-primary);
+    background-color: var(--green-secondary);
+}
+
+.form-button:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 576px) {
+    .common-field {
+        font-size: 16px;
+    }
+}
