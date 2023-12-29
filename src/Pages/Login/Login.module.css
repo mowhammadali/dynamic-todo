@@ -1,0 +1,20 @@
+#login {
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 500px;
+    height: 200px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 8px 1px #eaeaea ,
+    -2px -2px 8px 1px #dcdcdc;
+}
+
+.fieldContainer {
+    width: 100%;
+}
