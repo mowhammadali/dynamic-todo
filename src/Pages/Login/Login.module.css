@@ -3,19 +3,6 @@
     user-select: none;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    width: 500px;
-    height: auto;
-    margin: 60px auto;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 2px 2px 8px 1px #eaeaea ,
-    -2px -2px 8px 1px #dcdcdc;
-}
-
 .header {
     display: flex;
     flex-direction: column;
@@ -63,6 +50,15 @@
     right: 6px;
     font-size: 12px;
     color: var(--error-primary);
+}
+
+.fieldIcon {
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: var(--medium-text-primary);
 }
 
 @media screen and (max-width: 576px) {

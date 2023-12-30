@@ -1,7 +1,20 @@
+.common-form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 500px;
+    height: auto;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 8px 1px #eaeaea ,
+    -2px -2px 8px 1px #dcdcdc;
+}
+
 .common-field {
     width: 100%;
     height: 40px;
-    padding: 0 10px;
+    padding: 0 14px 0 40px;
     font-size: 18px;
     outline: none;
     border: 2px solid var(--input-border-primary);
