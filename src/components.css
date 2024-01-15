@@ -24,6 +24,10 @@
 
 .form-button {
     all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     width: 100%;
     padding: 15px 0;
     font-size: 18px;
