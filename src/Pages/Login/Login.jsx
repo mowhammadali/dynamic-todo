@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import styles from './Login.module.css';
+import { loginUser } from '../../Services/Axios/Requests/login';
+import { ToastContainer } from 'react-toastify';
 import { NavLink } from 'react-router-dom';
 import { HiOutlineLogin } from "react-icons/hi";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { GoLock } from "react-icons/go";
+import notify from '../../Helper/Toast/toast';
 import loginSchema from '../../Validation/loginValidation';
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -21,9 +24,22 @@ const Login = () => {
             let validation = await loginSchema.validate(userData , {
                 abortEarly: false,
             });
+
             setErrors({});
             setIsPending(true);
+
+            setTimeout(() => {
+                loginUser(userData)
+                .then(res => {
+                    console.log(res);
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+                .finally(() => setIsPending(false))
+            }, 3000);
         }
+
         catch (err) {
             let errs = err.inner.reduce((acc , error) => ({
                 ...acc ,
@@ -75,6 +91,7 @@ const Login = () => {
                     {isPending && <CircularProgress color="inherit" size={15}/>}
                 </button>
             </form>
+            <ToastContainer />
         </div>
     )
 }
